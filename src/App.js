@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalStoreContext } from './Store';
 import axios from 'axios';
+import CurrentTemp from './components/CurrentTemp';
 
 import './App.css';
 
@@ -16,7 +17,7 @@ export default function App() {
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(
       position => {
-
+        getWeatherAndForecast(position.coords.latitude, position.coords.longitude);
       },
       err => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
@@ -59,7 +60,7 @@ export default function App() {
 
   return (
     <div className="App">
-      
+      <CurrentTemp />
     </div>
   );
 };
