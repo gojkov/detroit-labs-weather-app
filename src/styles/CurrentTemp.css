@@ -1,6 +1,6 @@
 img {
-    width: 2rem;
-    height: 2rem;
+    width: 125px;
+    height: 125px;
     margin: auto;
 }
 
@@ -15,9 +15,4 @@ img {
     background-color: brown;
     border-radius: 2rem;
     box-shadow: 4px 4px 1rem #000000;
-  }
-  
-  img {
-    width: 125px;
-    height: 125px;
-  }
+}
