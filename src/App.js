@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { GlobalStoreContext } from './Store';
 import axios from 'axios';
 import CurrentTemp from './components/CurrentTemp';
+import Forecast from './components/Forecast';
 
 import './App.css';
 
@@ -59,8 +60,14 @@ export default function App() {
 
 
   return (
-    <div className="App">
-      <CurrentTemp />
-    </div>
+    globalStore.isAppLoaded ? 
+    (   <div className="App">
+          <CurrentTemp />
+          <Forecast />
+        </div>
+    )
+       : 
+       
+    ( <h2>Application is loading, please be patient...</h2> )
   );
 };
