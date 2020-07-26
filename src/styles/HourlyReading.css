@@ -1,0 +1,13 @@
+.hourly-unit {
+    width: 150px;
+    margin: 0 2px 2px 2px;
+    background-color: brown;
+    color: ivory;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #000000;
+}
+
+.hourly-unit img {
+    width: 100px;
+    height: 100px;
+}
