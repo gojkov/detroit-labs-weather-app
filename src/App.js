@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { GlobalStoreContext } from './Store';
+import axios from 'axios';
 
 import './App.css';
 
 export default function App() {
   const API_KEY = `bb10b69a4c319571b3ff6623ff802dea`;
   const [globalStore, setGlobalStore] = useContext(GlobalStoreContext);
+
+  useEffect(() => {
+    getLocation();
+    // eslint-disable-next-line
+  }, [globalStore.latitude]);
 
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(
@@ -14,6 +20,7 @@ export default function App() {
       },
       err => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
+        getIP();
       }
     );
   };
@@ -35,4 +42,4 @@ export default function App() {
       
     </div>
   );
-}
+};
