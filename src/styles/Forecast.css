@@ -1,6 +1,7 @@
 .forecast {
     min-width: 100vw;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
 }

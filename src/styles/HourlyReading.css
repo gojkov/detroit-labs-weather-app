@@ -1,13 +1,23 @@
 .hourly-unit {
     width: 150px;
-    margin: 0 2px 2px 2px;
-    background-color: brown;
+    margin: 0 4px 2px 4px;
     color: ivory;
     border-radius: 8px;
     box-shadow: 2px 2px 4px #000000;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .hourly-unit img {
     width: 100px;
     height: 100px;
+}
+
+.hourly-unit:first-of-type {
+    margin-left: 8px;
+}
+
+.hourly-unit:last-of-type {
+    margin-right: 8px;
 }

@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalStoreContext } from './Store';
-import axios from 'axios';
+
 import CurrentTemp from './components/CurrentTemp';
 import Forecast from './components/Forecast';
+
+import axios from 'axios';
 
 import './App.css';
 
@@ -54,7 +56,7 @@ export default function App() {
           JSON: forecast.data.list,
           isAppLoaded: true
         });
-        console.log(globalStore);
+       // console.log(globalStore);
       });
   };
 

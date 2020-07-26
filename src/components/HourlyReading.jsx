@@ -6,9 +6,9 @@ const HourlyReading = (props) => {
 
     return (
         <div className="hourly-unit">
-            <h6>{dateTime}</h6>
+            <h5>{dateTime}</h5>
             <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="hourly forecast weather graphic" />
-            <h4>{temp}&deg;</h4>
+            <h3>{temp}&deg;</h3>
         </div>
     );
 };
