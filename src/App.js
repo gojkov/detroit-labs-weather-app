@@ -36,6 +36,26 @@ export default function App() {
     });
   };
 
+  const getWeatherAndForecast = async (lat, lng) => {
+    const CURRENT_WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
+    const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
+
+    axios.all([axios.get(CURRENT_WEATHER_URL), axios.get(FORECAST_API_URL)])
+      .then(([currentWeather, forecast]) => {
+        setGlobalStore({
+          ...globalStore,
+          latitude: lat,
+          longitude: lng,
+          city: currentWeather.data.name,
+          currentTemp: Math.round(currentWeather.data.main.temp),
+          icon: currentWeather.data.weather[0].icon,
+          JSON: forecast.data.list,
+          isAppLoaded: true
+        });
+        console.log(globalStore);
+      });
+  };
+
 
   return (
     <div className="App">
