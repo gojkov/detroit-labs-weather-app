@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { GlobalStoreContext } from '../Store'
-import '../styles/CurrentTemp.scss'
+import React, { useContext } from 'react';
+import { GlobalStoreContext } from '../Store';
+import '../styles/CurrentTemp.scss';
 
 const CurrentTemp = () => {
-    const [globalStore] = useContext(GlobalStoreContext)
+    const [globalStore] = useContext(GlobalStoreContext);
 
     return (
         <div className="current-temp-card">
@@ -18,7 +18,7 @@ const CurrentTemp = () => {
                 {globalStore.city}.
             </h5>
         </div>
-    )
-}
+    );
+};
 
-export default CurrentTemp
+export default CurrentTemp;

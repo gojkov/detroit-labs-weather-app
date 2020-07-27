@@ -1,8 +1,8 @@
-import React from 'react'
-import '../styles/HourlyReading.scss'
+import React from 'react';
+import '../styles/HourlyReading.scss';
 
 const HourlyReading = (props) => {
-    const { dateTime, icon, temp } = props
+    const { dateTime, icon, temp } = props;
 
     return (
         <div className="hourly-unit">
@@ -13,7 +13,7 @@ const HourlyReading = (props) => {
             />
             <h3>{temp}&deg;</h3>
         </div>
-    )
-}
+    );
+};
 
-export default HourlyReading
+export default HourlyReading;
