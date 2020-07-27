@@ -19,10 +19,13 @@ export default function App() {
 
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(
-      position => {
-        getWeatherAndForecast(position.coords.latitude, position.coords.longitude);
+      (position) => {
+        getWeatherAndForecast(
+          position.coords.latitude,
+          position.coords.longitude
+        );
       },
-      err => {
+      (err) => {
         console.warn(`ERROR(${err.code}): ${err.message}`);
         getIP();
       }
@@ -38,7 +41,7 @@ export default function App() {
       ...globalStore,
       latitude: json.data.latitude,
       longitude: json.data.longitude,
-      city: json.data.city
+      city: json.data.city,
     });
 
     getWeatherAndForecast(json.data.latitude, json.data.longitude);
@@ -48,7 +51,8 @@ export default function App() {
     const CURRENT_WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
     const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
 
-    await axios.all([axios.get(CURRENT_WEATHER_URL), axios.get(FORECAST_API_URL)])
+    await axios
+      .all([axios.get(CURRENT_WEATHER_URL), axios.get(FORECAST_API_URL)])
       .then(([currentWeather, forecast]) => {
         setGlobalStore({
           ...globalStore,
@@ -58,22 +62,17 @@ export default function App() {
           currentTemp: Math.round(currentWeather.data.main.temp),
           icon: currentWeather.data.weather[0].icon,
           JSON: forecast.data.list,
-          isAppLoaded: true
+          isAppLoaded: true,
         });
       });
   };
 
-
-  return (
-    globalStore.isAppLoaded ? 
-    (   
-        <div className="App">
-          <CurrentTemp />
-          <Forecast />
-        </div>
-    )
-       : 
-       
-    ( <h2>Application is loading, please be patient...</h2> )
+  return globalStore.isAppLoaded ? (
+    <div className="App">
+      <CurrentTemp />
+      <Forecast />
+    </div>
+  ) : (
+    <h2>Application is loading, please be patient...</h2>
   );
-};
+}
