@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import HourlyReading from './HourlyReading';
 import { GlobalStoreContext } from '../Store';
 
-import '../styles/Forecast.css';
+import '../styles/Forecast.scss';
 
 const Forecast = () => {
     const [globalStore] = useContext(GlobalStoreContext);

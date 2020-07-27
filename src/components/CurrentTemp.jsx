@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalStoreContext } from '../Store';
-import '../styles/CurrentTemp.css';
+import '../styles/CurrentTemp.scss';
 
 const CurrentTemp = () => {
     const [globalStore] = useContext(GlobalStoreContext);

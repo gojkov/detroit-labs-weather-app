@@ -7,17 +7,17 @@
     background: #36D1DC;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
-.hourly-unit img {
-    width: 100px;
-    height: 100px;
-}
+    :first-of-type {
+        margin-left: 8px;
+    }
 
-.hourly-unit:first-of-type {
-    margin-left: 8px;
-}
+    :last-of-type {
+        margin-right: 8px;
+    }
 
-.hourly-unit:last-of-type {
-    margin-right: 8px;
+    img {
+        width: 100px;
+        height: 100px;
+    }
 }

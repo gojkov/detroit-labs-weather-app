@@ -15,7 +15,7 @@ export default function App() {
   useEffect(() => {
     getLocation();
     // eslint-disable-next-line
-  }, [globalStore.latitude]);
+  }, []);
 
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(
@@ -23,20 +23,21 @@ export default function App() {
         getWeatherAndForecast(position.coords.latitude, position.coords.longitude);
       },
       err => {
-        console.warn(`ERROR(${err.code}): ${err.message}`);
         getIP();
+        console.warn(`ERROR(${err.code}): ${err.message}`);
       }
     );
   };
 
   const getIP = async () => {
-    const IP_URL_HOME = 'https://ipapi.co/json/';
-    const json = await axios.get(IP_URL_HOME);
+    const IP_URL = `http://ip-api.com/json/`;
+    const json = await axios.get(IP_URL);
+    
     setGlobalStore({
       ...globalStore,
-      latitude: json.data.latitude,
-      longitude: json.data.longitude,
-      city: json.data.city
+      latitude: json.lat,
+      longitude: json.lon,
+      city: json.city
     });
   };
 
@@ -44,7 +45,7 @@ export default function App() {
     const CURRENT_WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
     const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
 
-    axios.all([axios.get(CURRENT_WEATHER_URL), axios.get(FORECAST_API_URL)])
+    await axios.all([axios.get(CURRENT_WEATHER_URL), axios.get(FORECAST_API_URL)])
       .then(([currentWeather, forecast]) => {
         setGlobalStore({
           ...globalStore,
@@ -56,14 +57,14 @@ export default function App() {
           JSON: forecast.data.list,
           isAppLoaded: true
         });
-       // console.log(globalStore);
       });
   };
 
 
   return (
     globalStore.isAppLoaded ? 
-    (   <div className="App">
+    (   
+        <div className="App">
           <CurrentTemp />
           <Forecast />
         </div>

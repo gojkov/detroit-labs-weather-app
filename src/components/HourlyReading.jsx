@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/HourlyReading.css';
+import '../styles/HourlyReading.scss';
 
 const HourlyReading = (props) => {
     const { dateTime, icon, temp } = props;
