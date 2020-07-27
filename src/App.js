@@ -5,6 +5,8 @@ import CurrentTemp from './components/CurrentTemp'
 import Forecast from './components/Forecast'
 
 import axios from 'axios'
+import SimpleBar from 'simplebar-react'
+import 'simplebar/dist/simplebar.min.css'
 
 import './App.css'
 
@@ -70,7 +72,9 @@ export default function App() {
     return globalStore.isAppLoaded ? (
         <div className="App">
             <CurrentTemp />
-            <Forecast />
+            <SimpleBar style={{ maxHeight: 300 }}>
+                <Forecast />
+            </SimpleBar>
         </div>
     ) : (
         <h2>Application is loading, please be patient...</h2>
