@@ -26,3 +26,21 @@
         margin: auto;
     }
 }
+
+@media screen and (min-width: 1400px) {
+    .current-temp-card {
+        img {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+}

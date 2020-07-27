@@ -1,6 +1,10 @@
 .App {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .spinner {
@@ -9,4 +13,10 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1400px) {
+    .App {
+        justify-content: space-evenly;
+    }
 }
