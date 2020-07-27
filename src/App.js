@@ -23,22 +23,25 @@ export default function App() {
         getWeatherAndForecast(position.coords.latitude, position.coords.longitude);
       },
       err => {
-        getIP();
         console.warn(`ERROR(${err.code}): ${err.message}`);
+        getIP();
       }
     );
   };
 
   const getIP = async () => {
-    const IP_URL = `http://ip-api.com/json/`;
+    const IP_API_KEY = `692425e26661c560e75e3f79adcc1567`;
+    const IP_URL = `http://api.ipstack.com/check?access_key=${IP_API_KEY}&format=1`;
     const json = await axios.get(IP_URL);
-    
+
     setGlobalStore({
       ...globalStore,
-      latitude: json.lat,
-      longitude: json.lon,
-      city: json.city
+      latitude: json.data.latitude,
+      longitude: json.data.longitude,
+      city: json.data.city
     });
+
+    getWeatherAndForecast(json.data.latitude, json.data.longitude);
   };
 
   const getWeatherAndForecast = async (lat, lng) => {
