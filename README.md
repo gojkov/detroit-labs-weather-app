@@ -35,3 +35,23 @@ You will also see any lint errors in the console.
 -   [HTML5 Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 -   [IPStack](https://ipstack.com/)
 -   [OpenWeatherMap](https://openweathermap.org/)
+
+## Requirements Given
+
+To build a simple weather forecast application based on the OpenWeatherMap API.
+
+1. Create a “Current Temperature” page that fetches and displays the current temperature
+   at the user’s current location.
+
+2. Add a “5 Day Temperatures” page to your application that fetches and displays the 5 day
+   forecast for the user’s current location. Display all of the 3-hourly forecasts within this 5
+   day period.
+
+The user should be able to access this "5 Day Forecast" page from the "Current
+Temperature" page. You may choose the navigation pattern used. For example, both
+pages could be top-level tabs within your application.
+
+Each row in the list should display:
+● The forecast date and time
+● The forecast temperature in Fahrenheit
+● The OpenWeatherMap icon that represents the forecast weather conditions.
