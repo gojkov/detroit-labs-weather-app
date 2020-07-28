@@ -1,6 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Detroit Labs Weather App - July 2020
 
-## Available Scripts
+## Instructions
+
+First, clone this repo
+
+### `git clone https://github.com/gojkov/detroit-labs-weather-app.git`
 
 In the project directory, you can run:
 
@@ -26,3 +30,17 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Technologies used
+
+-   Create React App
+-   React Hooks
+-   Context API
+-   Sass
+-   Prettier
+
+### NPM libraries
+
+-   Axios
+-   React Loader Spinner
+-   SimpleBar
