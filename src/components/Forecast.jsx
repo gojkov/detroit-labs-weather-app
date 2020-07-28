@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
-import HourlyReading from './HourlyReading';
 import { GlobalStoreContext } from '../Store';
+
+import HourlyReading from './HourlyReading';
 
 import '../styles/Forecast.scss';
 
 const Forecast = () => {
+    // This component is intended to be a wrapper in which to display each individual reading from 3-hr, 5-day forecast
+    // represented by the HourlyReading component
     const [globalStore] = useContext(GlobalStoreContext);
 
     const items = globalStore.JSON.map((item) => {

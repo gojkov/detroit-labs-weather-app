@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalStoreContext } from '../Store';
+
 import '../styles/CurrentTemp.scss';
 
 const CurrentTemp = () => {
@@ -7,6 +8,8 @@ const CurrentTemp = () => {
 
     return (
         <div
+            // If the length of city name retrieved is less than or equal to 12 characters,
+            // apply normal styles. If longer than 12 characters, apply alternate style to accomodate name length
             className={
                 globalStore.city.length <= 12
                     ? `current-temp-card`

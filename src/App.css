@@ -42,20 +42,3 @@
         #134e5e
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
-/* @media screen and (min-width: 1400px) {
-    .App {
-        justify-content: space-evenly;
-    }
-}
-
-@media screen and (orientation: landscape) and (min-width: 1000px) {
-    .App {
-        justify-content: space-evenly;
-    }
-}
-@media screen and (orientation: portrait) and (max-width: 450px) {
-    .App {
-        justify-content: space-evenly;
-    }
-} */

@@ -16,6 +16,7 @@ export default function App() {
     const API_KEY = `bb10b69a4c319571b3ff6623ff802dea`;
     const [globalStore, setGlobalStore] = useContext(GlobalStoreContext);
 
+    // Call getLocation() function upon app successfully mounting
     useEffect(() => {
         getLocation();
         // eslint-disable-next-line
@@ -23,12 +24,14 @@ export default function App() {
 
     const getLocation = () => {
         navigator.geolocation.getCurrentPosition(
+            // If use of location is allowed, retrieve from HTML5 Geolocation API
             (position) => {
                 getWeatherAndForecast(
                     position.coords.latitude,
                     position.coords.longitude
                 );
             },
+            // If use of location is refused, retrieve coordinates via IP address
             (err) => {
                 console.warn(`ERROR(${err.code}): ${err.message}`);
                 getIP();
@@ -48,15 +51,20 @@ export default function App() {
             city: json.data.city,
         });
 
+        // Once IP API has retrieved location data, call function retrieving current temp data and 5-day forecast
+        // based on the coordinates passed to it
         getWeatherAndForecast(json.data.latitude, json.data.longitude);
     };
 
     const getWeatherAndForecast = async (lat, lng) => {
+        // OpenWeatherMap API requires separate calls on free plan
         const CURRENT_WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
         const FORECAST_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=imperial`;
 
         await axios
+            // call both APIs
             .all([axios.get(CURRENT_WEATHER_URL), axios.get(FORECAST_API_URL)])
+            // when data for BOTH comes back, set the data as new state
             .then(([currentWeather, forecast]) => {
                 setGlobalStore({
                     ...globalStore,
@@ -72,6 +80,7 @@ export default function App() {
     };
 
     return globalStore.isAppLoaded ? (
+        // If API calls return completed, render app
         <div className="App">
             <CurrentTemp />
             <SimpleBar style={{ maxHeight: 300 }}>
@@ -79,6 +88,7 @@ export default function App() {
             </SimpleBar>
         </div>
     ) : (
+        // Until the API calls return our data, display loading spinner
         <div className="spinner-container">
             <Loader
                 className="spinner"
