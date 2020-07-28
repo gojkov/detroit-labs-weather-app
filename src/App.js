@@ -80,12 +80,14 @@ export default function App() {
             </SimpleBar>
         </div>
     ) : (
-        <Loader
-            className="spinner"
-            type="Grid"
-            color="#00BFFF"
-            height={80}
-            width={80}
-        />
+        <div className="spinner-container">
+            <Loader
+                className="spinner"
+                type="Grid"
+                color="ivory"
+                height={80}
+                width={80}
+            />
+        </div>
     );
 }
