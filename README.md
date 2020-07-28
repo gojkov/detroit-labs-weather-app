@@ -39,8 +39,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 -   Sass
 -   Prettier
 
-### NPM libraries
+#### NPM libraries
 
 -   Axios
 -   React Loader Spinner
 -   SimpleBar
+
+#### APIs
+
+-   [HTML5 Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+-   [IPStack](https://ipstack.com/)
+-   [OpenWeatherMap](https://openweathermap.org/)
