@@ -29,3 +29,12 @@
         height: 100px;
     }
 }
+
+@media screen and (orientation: portrait) and (max-height: 768px) {
+    .hourly-unit {
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}

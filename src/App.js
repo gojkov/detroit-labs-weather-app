@@ -6,11 +6,10 @@ import Forecast from './components/Forecast';
 
 import axios from 'axios';
 import Loader from 'react-loader-spinner';
-
 import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import 'simplebar/dist/simplebar.min.css';
 import './App.css';
 
 export default function App() {
