@@ -19,18 +19,52 @@
         #f7b733,
         #fc4a1a
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-    img {
-        width: 125px;
-        height: 125px;
-        margin: auto;
-    }
+.long-name-card {
+    color: white;
+    display: flex;
+    margin: 1rem auto 2rem auto;
+    padding: 0 0.75rem;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 50vh;
+    width: 15rem;
+    border-radius: 2rem;
+    box-shadow: 4px 4px 1rem #000000;
+    background: #fc4a1a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #f7b733,
+        #fc4a1a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #f7b733,
+        #fc4a1a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img {
+    width: 125px;
+    height: 125px;
+    margin: auto;
 }
 
 @media screen and (min-width: 1400px) {
     .current-temp-card {
         h1 {
             font-size: 32px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+
+    .long-name-card {
+        h1 {
+            font-size: 2em;
         }
 
         h5 {
@@ -46,11 +80,30 @@
             height: 100px;
         }
     }
+
+    .long-name-card {
+        h1 {
+            font-size: 1.5em;
+        }
+    }
 }
 
 @media screen and (orientation: portrait) and (max-height: 768px) {
     .current-temp-card {
         margin-bottom: 0.8rem;
+
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    .long-name-card {
+        margin-bottom: 0.8rem;
+
+        h1 {
+            font-size: 1.5rem;
+        }
 
         img {
             width: 75px;
