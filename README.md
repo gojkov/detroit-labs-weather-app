@@ -33,17 +33,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Technologies used
 
--   Create React App
--   React Hooks
--   Context API
--   Sass
--   Prettier
+-   [Create React App](https://create-react-app.dev/)
+-   [React Hooks](https://reactjs.org/docs/hooks-overview.html)
+-   [Context API](https://reactjs.org/docs/context.html#when-to-use-context)
+-   [Sass](https://sass-lang.com/)
+-   [Prettier](https://prettier.io/)
 
 #### NPM libraries
 
--   Axios
--   React Loader Spinner
--   SimpleBar
+-   [Axios](https://www.npmjs.com/package/axios)
+-   [React Loader Spinner](https://www.npmjs.com/package/react-loader-spinner)
+-   [SimpleBar](https://www.npmjs.com/package/simplebar-react)
 
 #### APIs
 
