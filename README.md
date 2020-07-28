@@ -58,11 +58,11 @@ Each row in the list should display:
 
 ## Handling Ambiguity
 
-"How can I demonstrate that I 'go for it'?"
-"How can I set myself apart in how I approach and complete this project?"
-"How can I show an exceptional understanding of JavaScript and React?"
-"How can I at least show great potential if I don't get this perfect?"
-"How can I exhibit an uncommon drive to get the best out of my ability?"
+-   "How can I demonstrate that I 'go for it'?"
+-   "How can I set myself apart in how I approach and complete this project?"
+-   "How can I show an exceptional understanding of JavaScript and React?"
+-   "How can I at least show great potential if I don't get this perfect?"
+-   "How can I exhibit an uncommon drive to get the best out of my ability?"
 
 These were some of the most important, driving questions I asked myself over the course of completing the project. There was a lot of room for interpretation in my outline from Pedro, and whenever a situation arose where I needed to make a decision, I chose to **not** to take the easy way out or 'see what I can get away with'. I do things because they are hard, not because they are easy. I wanted to handle the ambiguity by choosing the harder-but-superior option.
 
