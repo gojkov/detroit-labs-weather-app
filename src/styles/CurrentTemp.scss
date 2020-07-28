@@ -38,3 +38,10 @@
         }
     }
 }
+
+@media screen and (orientation: portrait) and (max-width: 450px) {
+    .current-temp-card {
+        width: 67vw;
+        margin: 1rem auto auto auto;
+    }
+}
