@@ -72,6 +72,6 @@ In particular, there was ambiguity around how the user's location was to be dete
 
 All JavaScript/React functionality was completed in 8 hours, 42 minutes.
 
-Much more time was taken to refine the CSS.
+Much more time was taken to refine the CSS and write the README.
 
 In completing, I coded for approximately 20 hours over the course of Friday, July 24 to Tuesday, July 28.
