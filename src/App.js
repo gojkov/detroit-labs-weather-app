@@ -12,8 +12,10 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import 'simplebar/dist/simplebar.min.css';
 import './App.css';
 
+export const API_KEY = `bb10b69a4c319571b3ff6623ff802dea`;
+export const IP_API_KEY = `692425e26661c560e75e3f79adcc1567`;
+
 export default function App() {
-    const API_KEY = `bb10b69a4c319571b3ff6623ff802dea`;
     const [globalStore, setGlobalStore] = useContext(GlobalStoreContext);
 
     // Call getLocation() function upon app successfully mounting
@@ -40,7 +42,6 @@ export default function App() {
     };
 
     const getIP = async () => {
-        const IP_API_KEY = `692425e26661c560e75e3f79adcc1567`;
         const IP_URL = `https://api.ipstack.com/check?access_key=${IP_API_KEY}&format=1`;
         const json = await axios.get(IP_URL);
 

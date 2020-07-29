@@ -66,6 +66,8 @@ Each row in the list should display:
 
 These were some of the most important, driving questions I asked myself over the course of completing the project. There was a lot of room for interpretation in my outline from Pedro, and whenever a situation arose where I needed to make a decision, I chose to **not** to take the easy way out or 'see what I can get away with'. I do things because they are hard, not because they are easy. I wanted to handle the ambiguity by choosing the harder-but-superior option.
 
+In particular, there was ambiguity around how the user's location was to be determined. Some might have chose an input field for an address, which pulled up a map with their position on it, etc. I chose to leave the user with only 1 decision to make - "Do I grant this site access to my location?" If they allow it, it will autodetect their coordinates from the HTML5 Geolocation API. If they deny it access, it will query IPStock API to determine their coordinates from their IP address. Either path then triggers the OpenWeatherMap API calls. Until that data returns, the user sees a loading spinner. The app switches on when the data returns.
+
 ## Time Investment
 
 All JavaScript/React functionality was completed in 8 hours, 42 minutes.

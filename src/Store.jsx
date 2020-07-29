@@ -6,24 +6,24 @@ export const GlobalStoreContext = createContext({
     longitude: 0,
     city: null,
     currentTemp: null,
-    JSON: {}
+    JSON: {},
 });
 
-function Store ({ children }) {
+export function Store({ children }) {
     const [globalStore, setGlobalStore] = useState({
         isAppLoaded: false,
         latitude: 0,
         longitude: 0,
         city: null,
         currentTemp: null,
-        JSON: {}
+        JSON: {},
     });
-    
+
     return (
         <GlobalStoreContext.Provider value={[globalStore, setGlobalStore]}>
             {children}
         </GlobalStoreContext.Provider>
     );
-}; 
+}
 
 export default Store;
