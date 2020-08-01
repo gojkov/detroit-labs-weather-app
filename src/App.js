@@ -84,7 +84,7 @@ export default function App() {
         // If API calls return completed, render app
         <div className="App">
             <CurrentTemp />
-            <SimpleBar style={{ maxHeight: 300 }}>
+            <SimpleBar style={{ maxHeight: 300, color: 'white' }}>
                 <Forecast />
             </SimpleBar>
         </div>
